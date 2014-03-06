@@ -1,5 +1,4 @@
 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -25,7 +24,7 @@ public class NovoChamadoServlet extends HttpServlet {
 			out.println("<h1>Preencha os dados</h1>");
 			out.println("<hr>");
 			out.println("<form method='POST'>");
-			out.println("Código:<br> <input type='text' name='txtcodigo'>");
+			out.println("Cï¿½digo:<br> <input type='text' name='txtcodigo'>");
 			out.println("<br>");
 			out.println("Titulo:<br> <input type='text' name='txttitulo'>");
 			out.println("<br>");
@@ -58,8 +57,8 @@ public class NovoChamadoServlet extends HttpServlet {
 			out.println("Preencha o campo conteudo");
 		} else {
 			try {
-				Class.forName("org.postgresql.Driver");
-				Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Chamados","postgres","post");
+				//Class.forName("org.postgresql.Driver");
+				//Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Chamados","postgres","post");
 				
 				String SQL = "INSERT INTO atendimentos (ID, TITULO, CONTEUDO) VALUES (?, ?, ?)";
 				//INSERT INTO "Atendimentos"(id, titulo, conteudo, data) VALUES (?, ?, ?, ?);
@@ -75,7 +74,7 @@ public class NovoChamadoServlet extends HttpServlet {
 				pstm.close();
 				conn.close();
 				} catch (ClassNotFoundException e) {
-					out.println("Problemas ao carregar o driver de conexão");
+					out.println("Problemas ao carregar o driver de conexï¿½o");
 					e.printStackTrace();
 				} catch (SQLException e) {
 					out.println("Problema ao gravar dados: " + e.getMessage());
