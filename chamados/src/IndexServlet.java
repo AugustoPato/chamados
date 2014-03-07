@@ -16,7 +16,7 @@ public class IndexServlet extends HttpServlet{
 			out.println("<title>Atendimentos</title>");
 			out.println("</head>");
 			out.println("<body>");
-			out.println("<h1>ATENDIMENTOS</h1>");
+			out.println("<h1>ATENDIMENTOS - Chamados de Clientes</h1>");
 			out.println("<hr>");
 			out.println("<a href='http://localhost:8080/chamados/NovoChamado'>Novo Chamado</a>");
 			out.println("<br>");
