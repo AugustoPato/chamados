@@ -23,6 +23,8 @@ public class IndexServlet extends HttpServlet{
 			out.println("<a href='http://localhost:8080/chamados/ListarChamados'>Listar Chamados</a>");
 			out.println("<br>");
 			out.println("<a href='logoff'>Sair</a>");
+			out.println("<br>");
+			out.println("<a href='augusto'>AUGUSTO GOMES DE OLIVEIRA</a>");
 			out.println("</body>");
 			out.println("</html>");
 		} catch (Exception e) {
